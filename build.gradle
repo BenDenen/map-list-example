@@ -18,7 +18,7 @@ buildscript {
         build_tools_version = '26.0.2'
 
         // Support
-        support_version = '26.1.0'
+        support_version = '27.1.1'
 
         // Play services
         play_services_version = '15.0.1'
