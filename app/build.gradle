@@ -17,6 +17,9 @@ ext {
     gson_version = '2.8.0'
     moshi_version = '2.1.0'
 
+    // Picasso
+    picasso_version = '2.5.2'
+
     // Testing
     junit_version = '4.12'
     core_testing_version = '1.0.0'
@@ -62,6 +65,9 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+    kapt {
+        generateStubs = true
+    }
 }
 
 dependencies {
@@ -75,6 +81,7 @@ dependencies {
     implementation "com.android.support:support-v4:$support_version"
     implementation "com.android.support:appcompat-v7:$support_version"
     implementation "com.android.support:design:$support_version"
+    implementation "com.android.support:recyclerview-v7:$support_version"
     implementation "com.android.support.constraint:constraint-layout:$constraint_version"
 
     // Play services
@@ -100,6 +107,9 @@ dependencies {
     implementation "com.squareup.okio:okio:$okio_version"
     implementation "com.google.code.gson:gson:$gson_version"
     implementation "com.squareup.retrofit2:converter-moshi:$moshi_version"
+
+    //Picasso
+    implementation "com.squareup.picasso:picasso:$picasso_version"
 
     testImplementation "junit:junit:$junit_version"
 
