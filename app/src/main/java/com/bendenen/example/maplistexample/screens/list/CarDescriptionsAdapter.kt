@@ -20,7 +20,7 @@ class CarDescriptionsAdapter(context: Context) : RecyclerView.Adapter<CarDescrip
 
     private val layoutInflater: LayoutInflater = context.getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
 
-    override fun onCreateViewHolder(parent: ViewGroup?, viewType: Int): CarDescriptionViewHolder =
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CarDescriptionViewHolder =
             CarDescriptionViewHolder(layoutInflater.inflate(R.layout.car_description_item, parent, false))
 
     override fun getItemCount(): Int = dataList.size
