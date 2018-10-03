@@ -32,8 +32,7 @@ import com.squareup.moshi.Json
 
 @Entity
 @TypeConverters(CarDescription.Converters::class)
-data class CarDescription(@PrimaryKey val localId: Int,
-                          val id: String,
+data class CarDescription(@PrimaryKey val id: String,
                           val modelIdentifier: String,
                           val modelName: String,
                           val name: String,
@@ -48,8 +47,7 @@ data class CarDescription(@PrimaryKey val localId: Int,
                           val latitude: Double,
                           val longitude: Double,
                           val innerCleanliness: Cleanliness,
-                          val carImageUrl: String,
-                          val newCarImageUrl: String = "https://content.drive-now.com/sites/default/files/cars/3x/$modelIdentifier/$color.png") {
+                          val carImageUrl: String) {
 
     enum class FuelType(val serverKey: String) {
 
